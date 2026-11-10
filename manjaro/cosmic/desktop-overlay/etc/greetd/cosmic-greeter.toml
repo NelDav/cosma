@@ -1,0 +1,10 @@
+[terminal]
+vt = "1"
+
+[general]
+service = "cosmic-greeter"
+
+[default_session]
+command = "cosmic-comp /bin/cosmic-greeter"
+user = "cosmic-greeter"
+

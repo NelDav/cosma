@@ -1,0 +1,16 @@
+[Unit]
+Description=Download Flatpak AppStream data on first boot
+ConditionPathExists=/usr/bin/flatpak
+ConditionPathExists=!/var/lib/flatpak-appstream-firstboot.done
+StartLimitIntervalSec=0
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/flatpak update --appstream --noninteractive
+ExecStartPost=/usr/bin/touch /var/lib/flatpak-appstream-firstboot.done
+Restart=on-failure
+RestartSec=60
+TimeoutStartSec=300
+
+[Install]
+WantedBy=multi-user.target
