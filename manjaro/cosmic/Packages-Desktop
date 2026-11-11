@@ -50,7 +50,6 @@ yay
 pamac-gtk
 >extra pamac-flatpak-plugin
 >extra pamac-snap-plugin
->extra cosmic-store
 
 
 ## Printing
@@ -111,7 +110,6 @@ qt6ct
 ## Applications
 
 >extra apparmor
-firefox
 fprintd                            # needed for fingerprint reader, optional for gdm
 >extra gtksourceview-pkgbuild      # syntax highlighting for PKGBUILDs
 >extra gufw
